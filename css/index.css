@@ -1326,7 +1326,7 @@ canvas:not(#ribbon-canvas),
   }
 }
 :root {
-  --global-font-size: 14px;
+  --global-font-size: 16px;
   --global-bg: #fff;
   --font-color: #4c4948;
   --hr-border: #d2ebfd;
@@ -2078,7 +2078,7 @@ figure.highlight pre .javascript .function {
   -ms-flex: 1 auto;
   flex: 1 auto;
   margin: 0 auto;
-  padding: 40px 15px;
+  padding: 40px 5px;
   max-width: 1200px;
   width: 100%;
 }
@@ -2444,7 +2444,7 @@ h1.page-title + .tag-cloud-list {
 }
 @media screen and (min-width: 900px) {
   #aside-content {
-    padding-left: 15px;
+    padding-left: 25px;
   }
 }
 @media screen and (max-width: 900px) {
