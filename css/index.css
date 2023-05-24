@@ -2854,7 +2854,7 @@ h1.page-title + .tag-cloud-list {
   display: table-cell;
   width: 100%;
   table-layout: fixed;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .site-data > a {
   display: table-cell;
