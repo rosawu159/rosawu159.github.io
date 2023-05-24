@@ -2509,6 +2509,9 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
   line-height: 2.4;
 }
+#aside-content .card-info #card-info-btn:hover {
+  background-color: var(--btn-hover-color);
+}
 #aside-content .card-info #card-info-btn span {
   padding-left: 10px;
 }
@@ -2534,9 +2537,6 @@ h1.page-title + .tag-cloud-list {
 #aside-content .card-tag-cloud a {
   display: inline-block;
   padding: 0 4px;
-}
-#aside-content .card-tag-cloud a:hover {
-  color: #49b1f5 !important;
 }
 #aside-content .aside-list > span {
   display: block;
