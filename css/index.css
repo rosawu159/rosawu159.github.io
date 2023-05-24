@@ -184,6 +184,7 @@ template {
 #aside-content .item-headline span,
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span,
+.site-data .a_item,
 .site-data > a .headline,
 .site-data > a .span,
 #nav #blog-info,
@@ -2846,6 +2847,11 @@ h1.page-title + .tag-cloud-list {
 }
 .site-data {
   display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.site-data .a_item {
+  display: table-cell;
   width: 100%;
   table-layout: fixed;
 }
