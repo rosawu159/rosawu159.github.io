@@ -184,6 +184,7 @@ template {
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span,
 .site-data > a .headline,
+.site-data > a .span,
 #nav #blog-info,
 #pagination .prev_info,
 #pagination .next_info,
@@ -2856,9 +2857,6 @@ h1.page-title + .tag-cloud-list {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
-}
-.site-data > a:hover div {
-  color: #49b1f5 !important;
 }
 .site-data > a .headline {
   color: var(--font-color);
