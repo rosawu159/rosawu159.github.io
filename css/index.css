@@ -181,6 +181,7 @@ template {
 .limit-one-line,
 #article-container .flink .flink-item-name,
 #article-container .flink .flink-item-desc,
+#aside-content .item-headline,
 #aside-content .item-headline span,
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span,
