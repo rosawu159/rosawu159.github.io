@@ -1653,6 +1653,7 @@ figure.highlight pre .javascript .function {
   background: var(--hl-bg);
   color: var(--hl-color);
   line-height: 1.6;
+  border-radius: 10px;
 }
 #article-container pre,
 #article-container code {
