@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>儲備知識中 - 階乘練習 | 下一個扭蛋機</title><meta name="author" content="Rosa Wu"><meta name="copyright" content="Rosa Wu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="稍微在日常準備一些技術題目以備不時之需。以工程師面試來說，面試主要會分成：  演算法 概念理解 系統設計  演算法基本上是以leetcode刷題為主，而系統設計主要是看Alex Xu的文章。這裡也會時不時將軟體工程師需要具備的概念進行整理。 QUESTION: 寫一個方法 TrailingZeros(n)，它接受一個整數並傳回 Factorial(n) 中尾隨零的數量。 ANSWER:    12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="儲備知識中 - 階乘練習">
+<meta property="og:url" content="http://rosawu159.github.io/posts/interview_prepare_coding4/index.html">
+<meta property="og:site_name" content="下一個扭蛋機">
+<meta property="og:description" content="稍微在日常準備一些技術題目以備不時之需。以工程師面試來說，面試主要會分成：  演算法 概念理解 系統設計  演算法基本上是以leetcode刷題為主，而系統設計主要是看Alex Xu的文章。這裡也會時不時將軟體工程師需要具備的概念進行整理。 QUESTION: 寫一個方法 TrailingZeros(n)，它接受一個整數並傳回 Factorial(n) 中尾隨零的數量。 ANSWER:    12">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://rosawu159.github.io/img/canva/canva4.png">
+<meta property="article:published_time" content="2023-12-14T17:09:40.783Z">
+<meta property="article:modified_time" content="2023-12-14T17:23:10.928Z">
+<meta property="article:author" content="Rosa Wu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://rosawu159.github.io/img/canva/canva4.png"><link rel="shortcut icon" href="/img/cake-pop.png"><link rel="canonical" href="http://rosawu159.github.io/posts/interview_prepare_coding4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '儲備知識中 - 階乘練習',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-12-15 01:23:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Shiromaro-2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><span>文章<div class="length-num">18</div></span><span>圖片<div class="length-num">6</div></span><span>分類<div class="length-num">3</div></span></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-tags"></i><span> Photo</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Japan/"><i class="fa-fw fas fa-music"></i><span> Japan</span></a></li><li><a class="site-page child" href="/categories/Stacknote/"><i class="fa-fw fas fa-video"></i><span> Stacknote</span></a></li><li><a class="site-page child" href="/categories/Trends/"><i class="fa-fw fas fa-heart"></i><span> Trends</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../../img/canva/canva4.png')"><nav id="nav"><span id="blog-info"><a href="/" title="下一個扭蛋機"><span class="site-name">下一個扭蛋機</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-tags"></i><span> Photo</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/Japan/"><i class="fa-fw fas fa-music"></i><span> Japan</span></a></li><li><a class="site-page child" href="/categories/Stacknote/"><i class="fa-fw fas fa-video"></i><span> Stacknote</span></a></li><li><a class="site-page child" href="/categories/Trends/"><i class="fa-fw fas fa-heart"></i><span> Trends</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">儲備知識中 - 階乘練習</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2023-12-14T17:09:40.783Z" title="發表於 2023-12-15 01:09:40">2023-12-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2023-12-14T17:23:10.928Z" title="更新於 2023-12-15 01:23:10">2023-12-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Stacknote/">Stacknote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="儲備知識中 - 階乘練習"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>稍微在日常準備一些技術題目以備不時之需。以工程師面試來說，面試主要會分成：</p>
+<ol>
+<li>演算法</li>
+<li>概念理解</li>
+<li>系統設計</li>
+</ol>
+<p>演算法基本上是以leetcode刷題為主，而系統設計主要是看Alex Xu的文章。這裡也會時不時將軟體工程師需要具備的概念進行整理。</p>
+<p><strong>QUESTION</strong>: 寫一個方法 TrailingZeros(n)，它接受一個整數並傳回 Factorial(n) 中尾隨零的數量。</p>
+<p><strong>ANSWER</strong>:<br>    <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">trailingZeros</span>(<span class="params">n</span>):</span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> n &gt;= <span class="number">5</span>:</span><br><span class="line">        n //= <span class="number">5</span></span><br><span class="line">        count += n</span><br><span class="line">    <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure></p>
+<p><strong>QUESTION</strong>: 建立簡單標記語言的目錄。</p>
+<p><strong>ANSWER</strong>:<br>    <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">tableOfContents</span>(<span class="params">text</span>):</span><br><span class="line">    toc = []</span><br><span class="line">    chapter_number = <span class="number">0</span></span><br><span class="line">    section_number = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> text:</span><br><span class="line">        <span class="keyword">if</span> line.startswith(<span class="string">&quot;# &quot;</span>):</span><br><span class="line">            chapter_number += <span class="number">1</span></span><br><span class="line">            section_number = <span class="number">0</span></span><br><span class="line">            toc.append(<span class="string">f&quot;<span class="subst">&#123;chapter_number&#125;</span>. <span class="subst">&#123;line[<span class="number">2</span>:]&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">elif</span> line.startswith(<span class="string">&quot;## &quot;</span>):</span><br><span class="line">            section_number += <span class="number">1</span></span><br><span class="line">            toc.append(<span class="string">f&quot;   <span class="subst">&#123;chapter_number&#125;</span>.<span class="subst">&#123;section_number&#125;</span> <span class="subst">&#123;line[<span class="number">3</span>:]&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> toc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sample Input</span></span><br><span class="line">sample_input = [</span><br><span class="line">    <span class="string">&quot;# Cars&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Cars came into global use during the&quot;</span>,</span><br><span class="line">    <span class="string">&quot;20th century&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Most definitions of car say they run&quot;</span>,</span><br><span class="line">    <span class="string">&quot;primarily on roads&quot;</span>,</span><br><span class="line">    <span class="string">&quot;## Sedan&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Sedan&#x27;s first recorded use as a name&quot;</span>,</span><br><span class="line">    <span class="string">&quot;for a car body was in 1912&quot;</span>,</span><br><span class="line">    <span class="string">&quot;## Coupe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;A coupe is a passenger car with a&quot;</span>,</span><br><span class="line">    <span class="string">&quot;sloping rear roofline and generally&quot;</span>,</span><br><span class="line">    <span class="string">&quot;two doors&quot;</span>,</span><br><span class="line">    <span class="string">&quot;## SUV&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The predecessors to SUVs date back to&quot;</span>,</span><br><span class="line">    <span class="string">&quot;military and low-volume models from&quot;</span>,</span><br><span class="line">    <span class="string">&quot;the late 1930s&quot;</span>,</span><br><span class="line">    <span class="string">&quot;There is no commonly agreed&quot;</span>,</span><br><span class="line">    <span class="string">&quot;definition of an SUV, and usage&quot;</span>,</span><br><span class="line">    <span class="string">&quot;varies between countries&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate and print the table of contents</span></span><br><span class="line">table_of_contents = tableOfContents(sample_input)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> table_of_contents:</span><br><span class="line">    <span class="built_in">print</span>(line)</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><strong>QUESTION</strong>: 給定以下 HTML 片段，哪些 XPath 定位器唯一標識搜尋按鈕？<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt; div class=&quot;outer&quot;&gt;</span><br><span class="line">&lt; div claps=&quot;inner&quot;›</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;searchField&quot;</span> <span class="attr">class</span>=<span class="string">&quot;searchField</span></span></span><br><span class="line"><span class="string"><span class="tag">_abc123&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;searchButton&quot;</span> <span class="attr">class</span>=<span class="string">&quot;searchButton_def456&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Go go go!&quot;</span>&gt;</span></span><br><span class="line">&lt;/ div&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>OPTIONS</strong>:<br>    1. &#x2F;&#x2F;input<br>    2. &#x2F;&#x2F;input[@id&#x3D;’searchButton’]<br>    3. &#x2F;&#x2F;div&#x2F;div&#x2F;input[contains@class, ‘search’)]<br>    4. &#x2F;&#x2F;div&#x2F;&#x2F;input[contains(@value, !’)]”)</p>
+<p><strong>ANSWER</strong>:<br>    1&#x2F;3&#x2F;4</p>
+<p><strong>QUESTION</strong>: Given the following HTML snippet, which CSS locators uniquely identify the search button?</p>
+<pre><code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">&lt; div class=&quot;inner&quot;&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;searchField&quot;</span> <span class="attr">class</span>=<span class="string">&quot;searchField_abc123&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>›</span></span><br><span class="line"><span class="tag">&lt;<span class="attr">input</span> <span class="attr">id</span>=<span class="string">&quot;searchButton&quot;</span> <span class="attr">class</span>=<span class="string">&quot;searchButton_def456&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Go go go!&quot;</span>&gt;</span></span><br><span class="line">&lt;/ div&gt;</span><br><span class="line">&lt;/ div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<p><strong>OPTIONS</strong>:<br>    1. input#searchButton<br>    2. outer &gt; #searchButton<br>    3. •outer #searchButton<br>    4. inner &gt; #searchButton<br>    5. outer * #searchButton<br>    6. .inner :nth-child(2)</p>
+<p><strong>ANSWER</strong>:<br>    1&#x2F;2&#x2F;3&#x2F;4&#x2F;5</p>
+<p><strong>QUESTION</strong>: There exists a below class called Users to perform CURD operation on the user details currently works well with MySQL DB.<br>Assume there is a new change coming up to store it using a different web service, how would you refactor the code so that you can unit test it and well accommodate any similar changes in future.</p>
+<pre><code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Users &#123;</span><br><span class="line">public Users (mySQL MySQL) &#123;</span><br><span class="line">//implementation</span><br><span class="line">//CURD functions</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<p><strong>OPTIONS</strong>:<br>    1. Replace MySQL with a new web service<br>    2. Replace MySQL with a new web service and mock the web service to perform unit test<br>    3. Create an interface for storage and have different implementations<br>    4. Remove the MySQL dependency and move storage details to the Users class</p>
+<p><strong>ANSWER</strong>:<br>    3</p>
+<p><strong>QUESTION</strong>: How would you refactor the below class?</p>
+<pre><code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Employee &#123;</span><br><span class="line">    public Pay calculatePay () &#123;</span><br><span class="line">    //Calculate pay by total hours worked</span><br><span class="line">    public void save () &#123;</span><br><span class="line">    +/Access DB and save the details</span><br><span class="line">    ｝</span><br><span class="line">    public EmployeeDetails getEmployeeDefails ) t</span><br><span class="line">    //Get full details of the employee</span><br><span class="line">    ｝</span><br><span class="line">    ｝</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<p><strong>OPTIONS</strong>:<br>    1. All looks good<br>    2. Split each operation into different classes<br>    3. Move the DB access to a different class<br>    4. Move Pay calculation logic to a different class</p>
+<p><strong>ANSWER</strong>:<br>    3</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/rosawu159">Rosa Wu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="http://rosawu159.github.io/posts/interview_prepare_coding4/">http://rosawu159.github.io/posts/interview_prepare_coding4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://rosawu159.github.io" target="_blank">下一個扭蛋機</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/../../img/canva/canva4.png" data-sites="facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/interview_prepare_coding3/" title="儲備知識中 - 二維轉一維"><img class="cover" src="/../../img/canva/canva3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">儲備知識中 - 二維轉一維</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Shiromaro-2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Rosa Wu</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><span>文章<div class="length-num">18</div></span><span>圖片<div class="length-num">6</div></span><span>分類<div class="length-num">3</div></span></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/rosawu159"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fa-solid fa-location-dot"></i><span>看過來</span></div><div class="announcement_content">Take a deep breath and smile:)</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/interview_prepare_coding4/" title="儲備知識中 - 階乘練習"><img src="/../../img/canva/canva4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="儲備知識中 - 階乘練習"/></a><div class="content"><a class="title" href="/posts/interview_prepare_coding4/" title="儲備知識中 - 階乘練習">儲備知識中 - 階乘練習</a><time datetime="2023-12-14T17:09:40.783Z" title="發表於 2023-12-15 01:09:40">2023-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/interview_prepare_coding3/" title="儲備知識中 - 二維轉一維"><img src="/../../img/canva/canva3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="儲備知識中 - 二維轉一維"/></a><div class="content"><a class="title" href="/posts/interview_prepare_coding3/" title="儲備知識中 - 二維轉一維">儲備知識中 - 二維轉一維</a><time datetime="2023-12-14T16:56:41.772Z" title="發表於 2023-12-15 00:56:41">2023-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/interview_prepare_coding2/" title="儲備知識中 - 最長連續子序列"><img src="/../../img/canva/canva2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="儲備知識中 - 最長連續子序列"/></a><div class="content"><a class="title" href="/posts/interview_prepare_coding2/" title="儲備知識中 - 最長連續子序列">儲備知識中 - 最長連續子序列</a><time datetime="2023-12-13T18:46:20.647Z" title="發表於 2023-12-14 02:46:20">2023-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/interview_prepare_coding1/" title="儲備知識中 - 查找質數"><img src="/../../img/canva/canva1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="儲備知識中 - 查找質數"/></a><div class="content"><a class="title" href="/posts/interview_prepare_coding1/" title="儲備知識中 - 查找質數">儲備知識中 - 查找質數</a><time datetime="2023-12-13T18:20:35.023Z" title="發表於 2023-12-14 02:20:35">2023-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/interview_prepare_coding/" title="儲備知識中 - 查找公因數"><img src="/../../img/canva/canva.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="儲備知識中 - 查找公因數"/></a><div class="content"><a class="title" href="/posts/interview_prepare_coding/" title="儲備知識中 - 查找公因數">儲備知識中 - 查找公因數</a><time datetime="2023-09-27T18:02:34.241Z" title="發表於 2023-09-28 02:02:34">2023-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Rosa Wu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
